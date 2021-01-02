@@ -1,0 +1,270 @@
+{
+    "exam.py": [
+        {
+            "operation": "PASTE",
+            "lines": 60,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:49:30",
+            "keyStrokeInfo": "from selenium import webdriver\r\nimport time\r\nfrom selenium.webdriver.common.keys import Keys\r\nfrom selenium.webdriver.support.ui import Select\r\nimport datetime\r\n\r\nchromeOptions = webdriver.ChromeOptions()\r\npreferences = {\"download.default_directory\" : \"E:\\\\2nd Year\\\\DataScience_2019501107\\\\DADV\\\\finalexam\\\\day\"}\r\nchromeOptions.add_experimental_option(\"prefs\", preferences)\r\nchromedriver = \"E:\\\\2nd Year\\\\DataScience_2019501107\\\\DADV\\\\finalexam\\\\chromedriver.exe\"\r\nbrowser = webdriver.Chrome(executable_path=chromedriver, options=chromeOptions)\r\nbrowser.maximize_window()\r\n\r\nurl = \"https://en.wikipedia.org/wiki/List_of_S%26P_500_companies\"\r\nbrowser.get(url)\r\ntime.sleep(2)\r\n\r\nCompanies_list = []\r\nfor i in range(1, 5):\r\n\tp = browser.find_element_by_xpath('//*[@id=\"constituents\"]/tbody/tr['+str(i)+']/td[1]/a')\r\n\tCompanies_list.append(p.text)\r\n# print(len(Companies_list))\r\n# print(Companies_list)\r\n\r\ntime.sleep(4)\r\n\r\n#Time Conversion\r\nStart_date = datetime.datetime(2018, 4, 8)\r\nEnd_date = datetime.datetime(2021, 1, 2)\r\nfrom_date = int(time.mktime(Start_date.timetuple()))\r\nto_date = int(time.mktime(End_date.timetuple()))\r\nprint(from_date)\r\nprint(to_date)\r\n\r\nfor each in Companies_list:\r\n    browser.get(\"https://finance.yahoo.com/quote/\"+each+\"/history?period1=\"+str(from_date)+\"&period2=\"+str(to_date)+\"&interval=1d&filter=history&frequency=1d\")\r\n    browser.find_element_by_xpath('//*[@id=\"Col1-1-HistoricalDataTable-Proxy\"]/section/div[1]/div[2]/span[2]/a/span').click()\r\n    time.sleep(3)\r\n\r\nchromeOptions = webdriver.ChromeOptions()\r\npreferences2 = {\"download.default_directory\" : \"E:\\\\2nd Year\\\\DataScience_2019501107\\\\DADV\\\\finalexam\\\\week\"}\r\nchromeOptions.add_experimental_option(\"prefs\", preferences2)\r\nchromedriver2 = \"E:\\\\2nd Year\\\\DataScience_2019501107\\\\DADV\\\\finalexam\\\\chromedriver.exe\"\r\nbrowser = webdriver.Chrome(executable_path=chromedriver2, options = chromeOptions)\r\n\r\nfor each in Companies_list:\r\n    browser.get(\"https://finance.yahoo.com/quote/\"+each+\"/history?period1=\"+str(from_date)+\"&period2=\"+str(to_date)+\"&interval=1d&filter=history&frequency=1wk\")\r\n    browser.find_element_by_xpath('//*[@id=\"Col1-1-HistoricalDataTable-Proxy\"]/section/div[1]/div[2]/span[2]/a/span').click()\r\n    time.sleep(3)\r\n\r\nchromeOptions = webdriver.ChromeOptions()\r\npreferences3 = {\"download.default_directory\" : \"E:\\\\2nd Year\\\\DataScience_2019501107\\\\DADV\\\\finalexam\\\\month\"}\r\nchromeOptions.add_experimental_option(\"prefs\", preferences3)\r\nchromedriver3 = \"E:\\\\2nd Year\\\\DataScience_2019501107\\\\DADV\\\\finalexam\\\\chromedriver.exe\"\r\nbrowser = webdriver.Chrome(executable_path=chromedriver3, options = chromeOptions)\r\n\r\nfor each in Companies_list:\r\n    browser.get(\"https://finance.yahoo.com/quote/\"+each+\"/history?period1=\"+str(from_date)+\"&period2=\"+str(to_date)+\"&interval=1d&filter=history&frequency=1mo\")\r\n    browser.find_element_by_xpath('//*[@id=\"Col1-1-HistoricalDataTable-Proxy\"]/section/div[1]/div[2]/span[2]/a/span').click()\r\n    time.sleep(3)",
+            "position": "1,1"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:03",
+            "keyStrokeInfo": "\r\n",
+            "position": "1,1"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:05",
+            "keyStrokeInfo": "i",
+            "position": "1,1"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:05",
+            "keyStrokeInfo": "m",
+            "position": "1,2"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:05",
+            "keyStrokeInfo": "p",
+            "position": "1,3"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:05",
+            "keyStrokeInfo": "o",
+            "position": "1,4"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:06",
+            "keyStrokeInfo": "r",
+            "position": "1,5"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:06",
+            "keyStrokeInfo": "t",
+            "position": "1,6"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:06",
+            "keyStrokeInfo": " ",
+            "position": "1,7"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:07",
+            "keyStrokeInfo": "s",
+            "position": "1,8"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:07",
+            "keyStrokeInfo": "e",
+            "position": "1,9"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:09",
+            "keyStrokeInfo": "l",
+            "position": "1,10"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:12",
+            "keyStrokeInfo": "e",
+            "position": "1,11"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:12",
+            "keyStrokeInfo": "n",
+            "position": "1,12"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:12",
+            "keyStrokeInfo": "i",
+            "position": "1,13"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:13",
+            "keyStrokeInfo": "u",
+            "position": "1,14"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:14",
+            "keyStrokeInfo": "selenium",
+            "position": "1,8"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:25",
+            "keyStrokeInfo": "p",
+            "position": "1,1"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:26",
+            "keyStrokeInfo": "i",
+            "position": "1,2"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:26",
+            "keyStrokeInfo": "p",
+            "position": "1,3"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:26",
+            "keyStrokeInfo": " ",
+            "position": "1,4"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:34",
+            "keyStrokeInfo": "",
+            "position": "1,10"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:34",
+            "keyStrokeInfo": "",
+            "position": "1,9"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:34",
+            "keyStrokeInfo": "",
+            "position": "1,8"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:35",
+            "keyStrokeInfo": "",
+            "position": "1,7"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:35",
+            "keyStrokeInfo": "",
+            "position": "1,6"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:36",
+            "keyStrokeInfo": "n",
+            "position": "1,6"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:36",
+            "keyStrokeInfo": "s",
+            "position": "1,7"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:36",
+            "keyStrokeInfo": "t",
+            "position": "1,8"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:37",
+            "keyStrokeInfo": "a",
+            "position": "1,9"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:37",
+            "keyStrokeInfo": "l",
+            "position": "1,10"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:38",
+            "keyStrokeInfo": "l",
+            "position": "1,11"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:50",
+            "keyStrokeInfo": "/",
+            "position": "1,1"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:52",
+            "keyStrokeInfo": "",
+            "position": "1,1"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:50:53",
+            "keyStrokeInfo": "",
+            "position": "1,1"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:58:22",
+            "keyStrokeInfo": "",
+            "position": "19,19"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:58:47",
+            "keyStrokeInfo": "6",
+            "position": "19,19"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Sat Jan 02 2021 10:58:47",
+            "keyStrokeInfo": "0",
+            "position": "19,20"
+        }
+    ]
+}
